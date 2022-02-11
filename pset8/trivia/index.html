@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let correctAnswer = document.querySelector(".correct");
+                correctAnswer.addEventListener('click', function() {
+                    correctAnswer.style.backgroundColor = 'green';
+                    document.querySelector('#feedback').innerHTML = 'Correct';
+                })
+
+                let incorrectAnswer = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrectAnswer.length; i++) {
+                    incorrectAnswer[i].addEventListener('click', function() {
+                        incorrectAnswer[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback').innerHTML = 'Incorrect';
+                    });
+                }
+
+                <!-- Free response -->
+                document.querySelector("#check").addEventListener('click', function() {
+                    let userInput = document.querySelector('input');
+                    if (userInput.value === 'Captain Hook') {
+                        userInput.style.backgroundColor = 'green';
+                        document.querySelector('#feedback1').innerHTML = 'Correct';
+                    } else {
+                        userInput.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    }
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which 2008 film, starring Tom Cruise, is based on the July 20 plot to kill Adolf Hitler?</h3>
+                    <button class="correct">Valkyrie</button>
+                    <button class="incorrect">Stauffenberg</button>
+                    <button class="incorrect">Killing Hitler</button>
+                    <button class="incorrect">A New Germany</button>
+                    <p id="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which bitter and aggressive pirate is Peter Pan's sworn mortal enemy in the Disney adaptation?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+                <p id="feedback1"></p>
+            </div>
+        </div>
+    </body>
+</html>

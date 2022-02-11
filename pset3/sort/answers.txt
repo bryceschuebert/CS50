@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When doubling sorted numbers, the time also doubles indicating a omega(n)
+
+sort2 uses: Merge Sort
+
+How do you know?: When doubling the sorted numbers, it takes slightly more time than bubble sort 
+
+sort3 uses: Selection Sort
+
+How do you know?: When doubling sorted numbers, the time taken is squared

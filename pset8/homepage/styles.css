@@ -1,0 +1,58 @@
+.navbar-brand {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+.backgroundpicture {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.centeredtext {
+    text-align: center;
+    font-family: 'Archivo Black';
+    font-size: 125px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.nameinput{
+    width: 100%;
+    padding-top: 4px;
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 500;
+    outline: none;
+    text-align: center;
+}
+
+.background {
+    top: 30%;
+    left: 50%;
+    background-color: lightblue;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
