@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+        <h2>Stock Summary</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock["symbol"] }}</td>
+                    <td>{{ stock["stock_name"] }}</td>
+                    <td>{{ stock["totShares"] }}</td>
+                    <td>{{ usd(stock["price"]) }}</td>
+                    <td>{{ usd(stock["totShares"] * stock["price"]) }}</td>
+                <tr>
+                {% endfor %}
+                <tr>
+                    <td>CASH</td>
+                    <td></td><td></td><td></td>
+                    <td>{{ usd(cash) }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td></td><td></td><td></td><td></td>
+                <td>{{ usd(total) }}</td>
+            </tfoot>
+        </table>
+{% endblock %}
